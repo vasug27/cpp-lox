@@ -1,0 +1,28 @@
+// test.lox - Comprehensive Token Test
+
+var language = "Lox";
+var version = 1.0;
+
+class Compiler {
+  init() {
+    this.name = "Modern C++ Lox";
+  }
+
+  scan(source) {
+    print "Scanning: " + source;
+    // Lexical analysis phase
+    var isDone = false;
+    while (!isDone) {
+      if (source == nil) return true;
+    }
+  }
+}
+
+fun calculate(a, b) {
+  return (a + b) * 3.14 / 2 - 1;
+}
+
+var x = calculate(10, 20);
+if (x >= 100 or x != 50) {
+  print "Success!";
+}
