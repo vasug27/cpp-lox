@@ -2,33 +2,23 @@
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
-A modular and lightweight interpreter for the Lox programming language, written from scratch in Modern C++. This project demonstrates a deep understanding of compiler construction, specifically focusing on system software engineering and front-end compiler phases such as lexical analysis, tokenization, and language abstraction.
-
-## ✨ Technical Highlights
-
-This project is built with a strong focus on the core principles of compiler engineering and performance:
-
-- **Compiler Front-End Architecture:** Implements a robust `Scanner` and `Token` system to break down raw source code into manageable abstract tokens, handling lexical errors gracefully.
-- **Strong C/C++ Foundation:** Built entirely in C++ leveraging the Standard Template Library (`std::vector`, `std::string`, file streams), demonstrating robust memory management and performant system software abstractions.
-- **Language Abstractions:** Showcases a practical understanding of how programming languages are parsed, how syntax errors are managed, and how execution environments are simulated (REPL vs. File Execution).
-- **Extensible Design:** The architecture is decoupled and designed to easily integrate further compiler phases (Optimizer, Bytecode Generation, and Virtual Machine execution), mirroring the modularity required in production-grade compilers and linkers.
+A modular and lightweight interpreter for the Lox programming language, written from scratch in Modern C++. This project focuses on the interpreter frontend, including lexical analysis and tokenization, with a simple CMake-based build.
 
 ## ⚙️ Architecture
 
-Currently, the interpreter implements the following frontend components:
+The interpreter currently includes:
 
-- **Lox Runtime Environment (`lox.cpp`):** Manages the execution context, supporting both file-based script execution and an interactive REPL (Read-Eval-Print Loop) prompt.
-- **Lexical Analyzer (`Scanner.cpp`):** Reads raw source code and translates it into a sequence of meaningful tokens, ignoring whitespace and comments.
-- **Token Representation (`Token.cpp`):** Defines the structure for tokens, storing their lexemes, types, and source locations for precise error reporting.
+- **`lox.cpp`:** The program entrypoint that runs the scanner and supports file-based execution.
+- **`Scanner.cpp`:** A lexical scanner that reads source text and produces tokens.
+- **`Token.cpp`:** Token and literal representations with token type names.
 
-## 🚀 Getting Started
+## 🚀 Building
 
 ### Prerequisites
-- CMake (3.10 or higher)
-- A modern C++ compiler (GCC, Clang, or MSVC)
+- CMake 3.10 or higher
+- A modern C++ compiler (MSVC, GCC, or Clang)
 
-### Building and Running
-You can compile the project using CMake:
+### Build steps
 ```bash
 mkdir build
 cd build
@@ -36,16 +26,21 @@ cmake ..
 cmake --build .
 ```
 
-Run the interpreter in REPL mode:
+### Run
 ```bash
 ./lox
 ```
 
-Run a Lox script:
+To execute a Lox script:
 ```bash
 ./lox path/to/script.lox
 ```
 
-## 👨‍💻 Author
+## Notes
+
+- This implementation does not require external libraries such as Boost.
+- The project is intentionally kept simple with direct source inclusion and minimal file dependencies.
+
+## Author
 
 **Vasu Goel** ([@vasug27](https://github.com/vasug27))
